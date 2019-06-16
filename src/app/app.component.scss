@@ -1,0 +1,52 @@
+
+@import "../config/config.scss";
+
+:host {
+  min-height: 100%;
+  position: relative;
+  display: block;
+  background: url(../assets/#{$bg-image}) no-repeat center;
+  background-size: cover;
+}
+
+#root {
+  padding-bottom: $footer-height; /* Height of the footer */
+}
+#footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: $footer-height; /* Height of the footer */
+  background: $primary-color;
+  text-align: center;
+}
+
+.footer-text {
+  color: white;
+  $width:12px;
+  font-size: $width;
+  line-height: $width;
+  margin: ($footer-height - $width) / 2;
+  display: block;
+  font-weight: bold;
+}
+
+/*in react something like this: style={{ padding: config.nav.navLinkPadding }} */
+nav {
+    background-color: $navbar-bg;
+}
+.navbar-nav {
+  padding: $nav-link-padding;
+}
+
+.page {
+  @include page-default;
+}
+
+#nav-bar-logo {
+  transition-property: font-size;
+  transition-duration: 2s;
+}
+
+
+

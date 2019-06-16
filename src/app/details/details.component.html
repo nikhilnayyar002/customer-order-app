@@ -1,0 +1,8 @@
+<div class="neon green">Hello</div>
+<h1 class="neon green heading">{{customer?.user.name}}!</h1>
+
+<p  class="neon white">user id : {{customer.user.id}} </p>
+<p  class="neon white">order id : {{customer.order_id}} </p>
+<p  class="neon white">order date : {{customer?.createdAt.split('T')[0]}} </p>
+<p  class="neon white">order time : {{customer?.createdAt.split('T')[1].split('.')[0]}} </p>
+

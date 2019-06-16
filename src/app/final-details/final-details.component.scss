@@ -1,0 +1,37 @@
+:host {
+    display: block;
+    margin: 100px 0;
+}
+.total-amount {
+    border: 1px solid #4ab91a6e;
+    display: inline-block;
+    padding: 10px;
+    border-radius: 24px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin: 15px auto;
+}
+
+.greeting {
+        position: relative;
+        display: flex;
+        margin: 175px 0;
+        justify-content: center;
+}
+.greeting img {
+    background: hotpink;
+    width: 125px;
+    position: relative;
+    top: -5px;
+    margin-right: 10px;
+    opacity: 0.7;
+    border-radius: 100%;
+}
+.greeting p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-weight: bold;
+    width: 150px;
+}

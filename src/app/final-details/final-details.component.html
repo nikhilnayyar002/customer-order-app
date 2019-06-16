@@ -1,0 +1,21 @@
+<h2 class="neon purple heading">Bill Amount</h2>
+
+<ng-container *ngFor="let item of customer.items">
+    <div class="field-wrapper">
+        <div  class="neon green">{{item.name}}</div>
+        <div  class="neon white" style="font-size: 12px;">
+          items: {{item.quantity}}&nbsp;
+          tax: {{getItemTax(item)}}&nbsp;
+          total: {{getItemAmount(item)}}&nbsp;{{item.currency}}       
+        </div>
+    </div>
+</ng-container>
+
+<h4 class="neon green total-amount">Grand Total: {{getTotalAmount(customer)}}</h4>
+
+<div class="greeting">
+  <img src="../../assets/45332.png">
+    <p>
+        Thank you for purchasing items! Have a nice day and come back again.
+    </p>
+</div>

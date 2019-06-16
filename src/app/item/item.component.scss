@@ -1,0 +1,18 @@
+:host {
+    display: block;
+    //margin: 25px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px 0px  #ffc107, inset 0 0 20px 0px  #ffc107;
+    padding: 25px;
+    margin: 20px;
+    width: 400px !important;
+}
+
+:host:hover {
+    //transform: scale(1.1);
+    box-shadow: 0 0 20px 0px #853eb7, inset 0 0 20px 0px #853eb7;
+}
+
+.field-wrapper {
+    padding-bottom: 10px
+}

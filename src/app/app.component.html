@@ -1,0 +1,48 @@
+<div id="root">
+  <nav [class]="'navbar navbar-expand-lg '+ configData.nav.navType">
+    <a class="navbar-brand" href="#">
+      <span id="nav-bar-logo" class="glow">{{configData.company.name}}</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+      aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="#">Home</a>
+        <a class="nav-item nav-link active" href="#">Order</a>
+      </div>
+    </div>
+  </nav>
+
+  <ng-container *ngIf="!errorMsg; else errorTemplate">
+
+    <div class="page" *ngIf="customer; else spinner">
+      <app-details [customer]="customer"></app-details>
+      <app-restaurant [restaurant]="customer.restaurant"></app-restaurant>
+      <app-items [items]="customer.items"></app-items>
+      <app-final-details [customer]="customer"></app-final-details>
+    </div>
+
+    <ng-template #spinner>
+      <div class="d-flex justify-content-center" style="padding-top: 13rem">
+        <div class="spinner-grow" role="status" style="width:10rem; height: 10rem;">
+          <span class="sr-only">Loading...</span>
+        </div>
+      </div>
+    </ng-template>
+
+  </ng-container>
+  <ng-template #errorTemplate>
+    <div class="d-flex justify-content-center" style="padding-top: 13rem">
+      <div class="bg-danger text-white p-5">
+        {{errorMsg}}
+      </div>
+    </div>
+  </ng-template>
+
+
+</div>
+<div id="footer">
+  <span class="footer-text">&copy;2019 {{configData.company.name}}</span>
+</div>

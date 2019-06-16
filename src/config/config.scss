@@ -1,0 +1,54 @@
+@import '~bootstrap/scss/bootstrap.scss';
+
+$primary-color:#000000;
+$secondary-color:#ffffff80;
+$hover-color:white;
+$bg-image:'food-menu-old-brick-wall-wood-sheet-vector-18988673.jpg';
+
+//footer
+$footer-height:28px;
+
+//navbar
+$nav-link-padding:25px;
+$navbar-bg:#000000e3;
+
+//page
+$page-bg: #000000f2;
+$page-bg-padding:25px;
+$page-bg-padding-top:8rem;
+
+//headings
+$heading-margin-bottom:35px;
+
+//  padding + avg height of elements + custom 
+//$navbar-height-lg: 16px + 34px + 2 * $nav-link-padding;
+//$navbar-height: 16px + 40px;
+
+
+@mixin page-default() {
+    //height: calc(100vh - #{$navbar-height + $footer-height});
+    background: $page-bg;
+    color:$secondary-color;
+    padding: $page-bg-padding;
+    padding-top: $page-bg-padding-top;
+    transition: all 1s;
+    //@media (max-width: 992px) {
+    //    & {
+    //        height: calc(100vh - #{$navbar-height + $footer-height});
+    //    }
+    //  }
+    
+}
+
+@mixin getNeonEffect($color) {
+    text-shadow: 
+      0 0 5px $color,
+      0 0 10px $color,
+      0 0 20px $color,
+      0 0 40px $color,
+      0 0 80px $color,
+      0 0 90px $color,
+      0 0 100px $color,
+      0 0 150px $color;
+}
+
